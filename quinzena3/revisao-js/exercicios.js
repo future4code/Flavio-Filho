@@ -212,11 +212,20 @@ function anonimizaPessoa(pessoa) {
 
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
+  novoArray = arrayDePessoas.filter((pessoa) => {
+    return pessoa.idade >= 18
+  })
+  return novoArray
 
 }
 
 // EXERCÍCIO 16B
 function menoresDe18(arrayDePessoas) {
+  novoArray = arrayDePessoas.filter((pessoa) => {
+    return pessoa.idade < 18
+  }
+  )
+  return novoArray
 
 }
 
