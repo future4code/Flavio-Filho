@@ -51,25 +51,35 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
-  
+  return array.length
   
 }
 
 // EXERCÍCIO 06
 function retornaExpressoesBooleanas() {
-
+  const respostas = [false, false, true, true, true]
+  return respostas
 }
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
-
+  const nNumerosPares = []
+  for(let i = 0; nNumerosPares.length < n; i++){
+    if(i % 2 === 0){
+      nNumerosPares.push(i)
+    }
+  }
+  return nNumerosPares
 }
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
-  // return 'Escaleno'
-  // return 'Equilátero'
-  // return 'Isósceles'
+  if((a !== b) && (a !== c) && (b !== c)){
+  return 'Escaleno'
+  } else if((a === b) && (a === c) && (b === c)){
+  return 'Equilátero'
+  } else if(((a === b) !== c) || ((a === c) !== b) || ((b === c) !== a))
+  return 'Isósceles'
 }
 
 // EXERCÍCIO 09
