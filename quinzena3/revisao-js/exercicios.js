@@ -10,21 +10,48 @@ function inverteArray(array) {
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
-
+  let arrayNumerosPares = array.filter((item) => {
+    if(item % 2 === 0){
+      return true
+    }
+    return false
+  }) 
+  let paresAoQuadrado = arrayNumerosPares.map((item) => {
+    return item**2
+  })
+  return paresAoQuadrado
+ 
 }
 
 // EXERCÍCIO 03
 function retornaNumerosPares(array) {
+  let numerosPares = []
+
+  for(let valor of array){
+    if(valor % 2 === 0){
+      numerosPares.push(valor)
+    }
+  }
+  return numerosPares
 
 }
 
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
-
+  let maiorNumero = []
+    for(let i = 0; i < array.length; i++){
+  
+    if(array[i] > maiorNumero){
+        maiorNumero = array[i]
+    }
+  }
+  return maiorNumero
 }
+
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
+  
   
 }
 
@@ -62,6 +89,16 @@ function segundoMaiorEMenor(array) {
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length - i - 1; j++) {
+      if (array[j] > array[j + 1]) {
+        let arrayTemp = array[j]
+        array[j] = array[j + 1]
+        array[j + 1] = arrayTemp
+      }
+    }
+  }
+  return array
 
 }
 
