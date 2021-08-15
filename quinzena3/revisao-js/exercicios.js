@@ -231,40 +231,113 @@ function menoresDe18(arrayDePessoas) {
 
 // EXERCÍCIO 17A
 function multiplicaArrayPor2(array) {
+  const novoArray = array.map((num) => {
+    return num * 2
+  })
+  return novoArray
 
 }
 
 // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {
+  const novoArray = array.map((num) => {
+    return (num * 2).toString()
+  })
+  return novoArray
 
 }
 
 // EXERCÍCIO 17C
 function verificaParidade(array) {
+  const novoArray = array.map((num) => {
+    if (num % 2 === 0) {
+      return `${num} é par`
+    } else {
+      return `${num} é ímpar`
+    }
+  })
+
+  return novoArray
 
 }
 
 // EXERCÍCIO 18A
 function retornaPessoasAutorizadas(pessoas) {
+  let pessoasAutorizadas = []
+  for (const pessoa of pessoas) {
+    if (pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60) {
+      pessoasAutorizadas.push(pessoa)
+    }
+  }
+  return pessoasAutorizadas
 
 }
 
 // EXERCÍCIO 18B
 function retornaPessoasNaoAutorizadas(pessoas) {
+  let pessoasNaoAutorizadas = []
+  for (const pessoa of pessoas) {
+    if (pessoa.altura < 1.5 || pessoa.idade <= 14 || pessoa.idade >= 60) {
+      pessoasNaoAutorizadas.push(pessoa)
+    }
+  }
+  return pessoasNaoAutorizadas
 
 }
 
 // EXERCÍCIO 19A
 function ordenaPorNome(consultasNome) {
+  for (let i = 0;i < consultasNome.length;i++) {
+    for (let j = 0;j < consultasNome.length - i - 1;j++) {
+      if (consultasNome[j].nome > consultasNome[j + 1].nome) {
+        const temp = consultasNome[j]
+        consultasNome[j] = consultasNome[j + 1]
+        consultasNome[j + 1] = temp
+      }
+    }
+  }
+  return consultasNome
 
 }
 
 // EXERCÍCIO 19B
 function ordenaPorData(consultasData) {
+  for (let i = 0;i < consultasData.length;i++) {
+    for (let j = 0;j < consultasData.length - i - 1;j++) {
+
+      const arrayData1 = consultasData[j].dataDaConsulta.split('/')
+      const dia1 = Number(arrayData1[0])
+      const mes1 = Number(arrayData1[1])
+      const ano1 = Number(arrayData1[2])
+
+      const arrayData2 = consultasData[j + 1].dataDaConsulta.split('/')
+      const dia2 = Number(arrayData2[0])
+      const mes2 = Number(arrayData2[1])
+      const ano2 = Number(arrayData2[2])
+
+      const data1 = new Date(ano1, mes1 - 1, dia1).getTime()
+      const data2 = new Date(ano2, mes2 - 1, dia2).getTime()
+
+      if (data1 > data2) {
+        const temp = consultasData[j]
+        consultasData[j] = consultasData[j + 1]
+        consultasData[j + 1] = temp
+      }
+    }
+  }
+  return consultasData
 
 }
 
 // EXERCÍCIO 20
 function calculaSaldo(contas) {
+  contas.forEach((conta) => {
+    let totalDeCompras = 0
+    conta.compras.forEach((valor) => {
+      totalDeCompras += valor
+    })
+    conta.saldoTotal -= totalDeCompras
+  })
+  return contas
 
 }
