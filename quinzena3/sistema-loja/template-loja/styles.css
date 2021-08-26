@@ -1,0 +1,45 @@
+header {
+    padding: 3% 8% 0% 8%;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #13c7ae;    
+    color: white;
+}
+
+nav {
+    padding: 2%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav a {
+    
+    color: white;
+}
+
+.informacoes {
+    padding: 0% 0% 3% 8%;
+    font-size: x-large;
+    margin: 5%;
+}
+
+
+
+
+
+
+footer {
+    padding: 3% 8% 0% 8%;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:#13c7ae;
+    color: white;
+}
+
+.logo-redes-sociais img {
+    max-width: 50px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+}
+
+
