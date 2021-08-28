@@ -45,6 +45,7 @@ div>p:first-child {
     border-radius: 5px;
     font-size: 20px;
     color: white;
+    margin-top: 10%;
 }
 
 .botao-amarelo:hover {
@@ -139,7 +140,11 @@ td button:hover {
     border-radius: 5px;
     font-size: 10px;
     color: black;
-}
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+    display: block;
+    }
 
 #back-button:hover {
     background-color: #635a3d
