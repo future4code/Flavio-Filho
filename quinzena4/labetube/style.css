@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    padding: 20px;
+    height: 10vh;
+    background-color: rgb(214, 67, 14);
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.main1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px 5px;
+}
+
+
+footer {
+    padding: 20px;
+    height: 10vh;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}
+
+#cards {
+    display: flex;
+    border-radius: 5px;
+    border: 3px groove rgb(0, 225, 255);
+    align-items: center;
+    flex-direction: column;
+    margin: 5px 5px;   
+}
+
+#cards img {
+    width: 20em;
+    height: 20em;
+    margin-bottom: 1em;
+}
+
+
+#main-videos {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+}
+video{
+    margin-bottom: 2%;
+    height: 65vh;
+}
