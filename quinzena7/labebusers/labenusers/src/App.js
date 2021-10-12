@@ -1,6 +1,14 @@
 import React from "react"
 import TelaCadastro from "./components/TelaCadastro"
 import TelaListaUsuarios from "./components/TelaListaUsuarios"
+import styled from "styled-components"
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  
+
+`
 
 export default class App extends React.Component {
   state = {
@@ -31,10 +39,9 @@ export default class App extends React.Component {
 
   render () {
     return (
-      <div>
+      <Container>
         {this.escolheTela()}
-        
-      </div>
+      </Container>
     );
   }
   

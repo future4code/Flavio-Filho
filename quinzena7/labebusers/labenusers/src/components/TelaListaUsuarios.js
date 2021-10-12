@@ -60,7 +60,7 @@ export default class TelaListaUsuarios extends React.Component {
 
         return (
             <div>
-                <button onClick={this.props.irParaCadastro} > Ir para Cadastro</button>
+                <button onClick={this.props.irParaCadastro} > VOLTAR </button>
                 <h2>Lista de Usuários</h2>
                 {listaUsuarios}
             </div>

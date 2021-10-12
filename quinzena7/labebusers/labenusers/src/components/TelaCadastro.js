@@ -1,5 +1,12 @@
 import axios from "axios";
 import React from "react";
+import styled from "styled-components";
+
+const ConatinerCadastro = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
 
 export default class TelaCadastro extends React.Component {
     state = {
@@ -42,8 +49,8 @@ export default class TelaCadastro extends React.Component {
 
     render() {
         return( 
-            <div>
-                <button onClick={this.props.irParaLista} > Ir para Lista de Usuários </button>
+            <ConatinerCadastro>
+                <button onClick={this.props.irParaLista} > LISTA DE USUÁRIOS </button>
                 <h2>Cadastro</h2>
                 <input 
                     placeholder={"Nome"}
@@ -56,7 +63,7 @@ export default class TelaCadastro extends React.Component {
                     onChange={this.handleEmail}
                 />
                 <button onClick={this.fazerCadastro} >Cadastrar</button>
-            </div>  
+            </ConatinerCadastro>  
     
         ) 
     } 
